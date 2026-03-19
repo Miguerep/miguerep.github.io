@@ -66,7 +66,6 @@ export default function Contact() {
               className="contact-link"
             >
               {s.icon}
-              <span className="contact-link-text">{displayText}</span>
             </a>
           );
         })}
