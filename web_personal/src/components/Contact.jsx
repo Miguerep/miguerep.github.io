@@ -1,5 +1,7 @@
 import { useInView } from '../hooks/useInView'
 
+
+
 const socials = [
   {
     name: 'GitHub',
@@ -52,25 +54,31 @@ export default function Contact() {
           className={`contact-links fade-in${inView ? ' visible' : ''}`}
           style={{ transitionDelay: '0.2s' }}
         >
-          {socials.map(s => (
+        {socials.map(s => {
+          const isEmail = s.name === 'Email';
+          const emailAddress = "miguerepvfr@gmail.com"; // Tu correo
+          const displayText = isEmail ? emailAddress : s.name;
+          return (
             <a
               key={s.name}
               href={s.href}
-              className="contact-social"
-              target={s.href.startsWith('mailto') ? undefined : '_blank'}
-              rel="noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-link"
             >
               {s.icon}
-              <span>{s.name}</span>
+              <span className="contact-link-text">{displayText}</span>
             </a>
-          ))}
+          );
+        })}
+          
         </div>
         <footer
           className={`footer fade-in${inView ? ' visible' : ''}`}
           style={{ transitionDelay: '0.3s' }}
         >
           <p className="mono">
-            Built with React + Vite &nbsp;·&nbsp; © {new Date().getFullYear()} Your Name
+            Built with React + Vite &nbsp;·&nbsp; © {new Date().getFullYear()} Miguel Milla
           </p>
         </footer>
       </div>

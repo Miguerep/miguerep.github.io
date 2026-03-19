@@ -11,25 +11,6 @@ const jobs = [
       'Mentored junior developers and ran weekly code reviews',
     ],
   },
-  {
-    company: 'Another Company',
-    role: 'Full Stack Developer',
-    period: '2021 — 2023',
-    bullets: [
-      'Built and maintained RESTful APIs with Node.js and Express',
-      'Developed responsive interfaces with React and TypeScript',
-      'Collaborated closely with design team to deliver pixel-perfect UIs',
-    ],
-  },
-  {
-    company: 'Startup XYZ',
-    role: 'Junior Developer',
-    period: '2020 — 2021',
-    bullets: [
-      'Contributed to a full-stack web app using the MERN stack',
-      'Wrote unit and integration tests, raising coverage from 40% to 85%',
-    ],
-  },
 ]
 
 export default function Experience() {
